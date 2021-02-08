@@ -13,8 +13,7 @@ const searchFood = () => {
             <div id="food" onclick="displayFoodInfo('${food.strMeal}')">
             <img src=${food.strMealThumb}>
             <h3>${food.strMeal}</h3>
-            </div>
-            `
+            </div> `
 
             const div = document.createElement("div");
             div.className="food-div"
@@ -42,14 +41,14 @@ const displayFood = div => {
     foodName.innerText = div.strMeal;
     foodInfo.appendChild(foodName);
 
-
     const ul = document.createElement("ul");
     for (let i = 1; i < 10; i++) {
         let foodIngredients = div[`strMeasure${i}`] + div[`strIngredient${i}`];
-        
+
         if(foodIngredients == "null"){
             continue;
         }
+        
         const li = document.createElement("li");
         li.innerText = foodIngredients;
         ul.appendChild(li);
