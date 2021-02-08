@@ -5,11 +5,17 @@ const searchFood = () => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFoodName}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => foodList(data.meals));
+    .then(data =>
+
+        {
+            foodList(data.meals);
+            document.getElementById("food-details").innerHTML = `<h4>Sir choose your food.</h4>`;
+           
+        });
 
     const foodList  = foods =>{
         if(foods == null){
-            document.getElementById("food-details").innerText = "This item is not available please find another.";
+            document.getElementById("food-details").innerHTML =`<h4>This item is not available.</h4>`;
         }
         foods.forEach(food => {
             const foodDetails =`
@@ -47,9 +53,6 @@ const displayFood = div => {
     const ul = document.createElement("ul");
     for (let i = 1; i < 10; i++) {
         let foodIngredients = div[`strMeasure${i}`] + div[`strIngredient${i}`];
-        // if(foodIngredients == "null"){
-        //     continue;
-        // }
 
         const li = document.createElement("li");
         li.innerText = foodIngredients;

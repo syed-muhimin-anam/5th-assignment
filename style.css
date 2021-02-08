@@ -43,7 +43,6 @@ body{
     overflow: auto;
     margin-top: 20px;
     margin-left: 100px;
-    text-align: center;
 }
 
 #food-item div div{
@@ -65,6 +64,7 @@ body{
     margin-top: 10px;
     margin-bottom: 10px; 
     margin-left: 550px;
+    text-align: center;
 }
 
 #food-details img{
