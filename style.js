@@ -46,6 +46,7 @@ const displayFood = div => {
     const ul = document.createElement("ul");
     for (let i = 1; i < 10; i++) {
         let foodIngredients = div[`strMeasure${i}`] + div[`strIngredient${i}`];
+        
         if(foodIngredients == "null"){
             continue;
         }
