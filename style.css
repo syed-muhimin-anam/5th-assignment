@@ -1,0 +1,54 @@
+body{
+    background-color: rgba(246, 246, 38, 0.74);
+}
+
+.search-box{
+    margin-top: 90px;
+    margin-left: 450px;
+    position: relative;
+    display: flex;
+}
+.search{
+    background-color: white;
+    border: none;
+    height: 35px;
+    width: 300px;
+    padding-left: 15px;
+    font-size: 15px;
+    outline: none;
+}
+.search-btn{
+    background-color: midnightblue;
+    border: none;
+    color: white;
+    outline-color: none; 
+    width: 60px; 
+    height: 35px;
+    border-radius: 0 3px 3px 0;
+}
+
+.food-div{
+    background-color: white;
+    border-radius: 10px;
+    width: 230px;
+}
+
+#food-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    height: 450px;
+    width: 1200px;
+    overflow: auto;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+#food-item div div{
+    padding: 10px;
+    text-align: center;
+}
+
+#food-item img, div img{
+    width: 200px;
+}
